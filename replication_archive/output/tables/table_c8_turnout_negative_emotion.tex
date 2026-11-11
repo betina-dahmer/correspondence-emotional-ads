@@ -1,0 +1,30 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Predicting Turnout Intentions CATEs from Negative Emotions},
+note{}={* p \num{< 0.05}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-9}{solid, black, 0.05em},
+hline{12}={1-9}{solid, black, 0.05em},
+hline{1}={1-9}{solid, black, 0.08em},
+hline{14}={1-9}{solid, black, 0.08em},
+column{2-9}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Dem (PD) & Dem (PR) & Ind (PD) & Ind (PR) & Rep (PD) & Rep (PR) & All & All (2) \\
+Intercept & \num{0.049} & \num{-0.047} & \num{0.090} & \num{-0.028} & \num{0.013} & \num{-0.012} & \num{0.004} & \num{0.012} \\
+& (\num{0.030}) & (\num{0.079}) & (\num{0.111}) & (\num{0.159}) & (\num{0.044}) & (\num{0.017}) & (\num{0.010}) & (\num{0.013}) \\
+Negative Index & \num{-0.097} & \num{0.092} & \num{-0.286} & \num{0.080} & \num{-0.061} & \num{0.034} & \num{-0.017} & \num{-0.014} \\
+& (\num{0.062}) & (\num{0.162}) & (\num{0.295}) & (\num{0.385}) & (\num{0.102}) & (\num{0.037}) & (\num{0.021}) & (\num{0.024}) \\
+Pro Republican &  &  &  &  &  &  &  & \num{-0.009} \\
+&  &  &  &  &  &  &  & (\num{0.007}) \\
+Independent &  &  &  &  &  &  &  & \num{-0.018} \\
+&  &  &  &  &  &  &  & (\num{0.014}) \\
+Republican &  &  &  &  &  &  &  & \num{-0.010} \\
+&  &  &  &  &  &  &  & (\num{0.009}) \\
+Observations & \num{21} & \num{13} & \num{21} & \num{13} & \num{21} & \num{13} & \num{102} & \num{102} \\
+Q-test p & 0.290 & 0.754 & 0.752 & 0.566 & 0.573 & 0.710 & 0.692 & 0.681 \\
+\end{talltblr}
+\end{table}

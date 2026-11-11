@@ -1,0 +1,371 @@
+ad_id,outcome,text,target_issue,target_issue_stretch,direction
+18,Base1GC,Stricter gun control laws,1,1,1
+24,Base1IS,Sending American ground troops overseas to fight ISIS,1,1,1
+38,Base1IS,Sending American ground troops overseas to fight ISIS,1,1,-1
+65,Base1IS,Sending American ground troops overseas to fight ISIS,1,1,1
+67,Base1IS,Sending American ground troops overseas to fight ISIS,1,1,1
+6,Base1AB,Repealing a woman's right to have an abortion,1,1,1
+38,Base1AB,Repealing a woman's right to have an abortion,1,1,-1
+24,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,-1
+38,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,1
+47,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,1
+57,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,-1
+69,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,-1
+75,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,1,1,1
+9,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+56,Base1EP,Paying women the same wages as men for doing the same job,1,1,1
+64,Base1GN,Increasing the strictness of laws covering the sale of firearms,1,1,-1
+12,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+66,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",1,1,1
+8,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+27,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+33,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+47,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+63,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+68,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+77,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+24,Base1BF,Building a fence along the Mexican boarder,1,1,1
+38,Base1BF,Building a fence along the Mexican boarder,1,1,-1
+47,Base1BF,Building a fence along the Mexican boarder,1,1,-1
+57,Base1BF,Building a fence along the Mexican boarder,1,1,1
+69,Base1BF,Building a fence along the Mexican boarder,1,1,1
+75,Base1BF,Building a fence along the Mexican boarder,1,1,-1
+45,Base1IS,Sending American ground troops overseas to fight ISIS,0,1,1
+57,Base1IS,Sending American ground troops overseas to fight ISIS,0,1,1
+60,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+70,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+62,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+12,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,1,1
+61,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,1,-1
+62,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,1,1
+8,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+12,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+26,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+27,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+33,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+47,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+61,Base1EP,Paying women the same wages as men for doing the same job,0,1,-1
+63,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+68,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+77,Base1EP,Paying women the same wages as men for doing the same job,0,1,1
+45,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+4,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+11,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+23,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+24,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+26,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+44,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+50,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+51,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+56,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+58,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+61,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+67,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+71,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+72,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,1,1
+26,Base1HA,Increased media attention to possible discrimination against or harassment of women,1,1,1
+56,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,1,1
+61,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,1,-1
+61,Base1BF,Building a fence along the Mexican boarder,0,1,1
+62,Base1BF,Building a fence along the Mexican boarder,0,1,-1
+3,Base1IW,The illegal hiring of undocumented workers,0,0,0
+4,Base1IW,The illegal hiring of undocumented workers,0,0,0
+6,Base1IW,The illegal hiring of undocumented workers,0,0,0
+8,Base1IW,The illegal hiring of undocumented workers,0,0,0
+9,Base1IW,The illegal hiring of undocumented workers,0,0,0
+11,Base1IW,The illegal hiring of undocumented workers,0,0,0
+12,Base1IW,The illegal hiring of undocumented workers,0,0,0
+17,Base1IW,The illegal hiring of undocumented workers,0,0,0
+18,Base1IW,The illegal hiring of undocumented workers,0,0,0
+30,Base1IW,The illegal hiring of undocumented workers,0,0,0
+33,Base1IW,The illegal hiring of undocumented workers,0,0,0
+3,Base1GC,Stricter gun control laws,0,0,0
+17,Base1GC,Stricter gun control laws,0,0,0
+3,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+4,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+6,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+8,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+9,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+11,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+12,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+17,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+18,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+20,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+21,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+23,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+26,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+27,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+30,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+33,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+39,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+42,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+44,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+47,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+48,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+50,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+51,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+54,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+56,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+58,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+59,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+61,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+62,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+63,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+64,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+66,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+68,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+69,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+71,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+72,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+74,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+75,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+76,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+77,Base1IS,Sending American ground troops overseas to fight ISIS,0,0,0
+3,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+4,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+8,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+9,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+11,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+12,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+17,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+18,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+20,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+21,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+23,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+24,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+26,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+27,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+30,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+33,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+39,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+42,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+44,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+45,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+47,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+48,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+50,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+51,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+54,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+56,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+57,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+58,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+59,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+60,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+61,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+63,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+64,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+65,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+66,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+67,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+68,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+69,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+70,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+71,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+72,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+74,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+75,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+76,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+77,Base1AB,Repealing a woman's right to have an abortion,0,0,0
+3,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+4,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+6,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+8,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+9,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+11,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+17,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+18,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+20,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+21,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+23,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+26,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+27,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+30,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+33,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+39,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+42,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+44,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+45,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+48,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+50,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+51,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+54,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+56,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+58,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+59,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+60,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+63,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+64,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+65,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+66,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+67,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+68,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+70,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+71,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+72,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+74,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+76,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+77,Base1PC,Providing a legal way for illegal immigrants already in the United States to become U.S. citizens,0,0,0
+3,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+11,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+17,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+18,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+20,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+21,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+23,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+24,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+30,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+38,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+39,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+42,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+44,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+45,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+48,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+50,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+51,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+54,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+57,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+58,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+59,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+60,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+62,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+64,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+65,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+66,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+67,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+69,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+70,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+71,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+72,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+74,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+75,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+76,Base1EP,Paying women the same wages as men for doing the same job,0,0,0
+3,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+8,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+33,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+42,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+44,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+47,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+48,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+50,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+51,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+54,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+56,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+57,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+58,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+59,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+60,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+61,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+62,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+63,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+65,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+66,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+67,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+68,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+69,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+70,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+71,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+72,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+74,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+75,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+76,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+77,Base1GN,Increasing the strictness of laws covering the sale of firearms,0,0,0
+3,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+6,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+8,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+9,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+17,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+18,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+20,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+21,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+27,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+30,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+33,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+38,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+39,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+42,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+45,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+47,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+48,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+54,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+57,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+59,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+60,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+62,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+63,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+64,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+65,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+68,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+69,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+70,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+74,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+75,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+76,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+77,Base1TX,"Increasing taxes on individuals who make more than $200,000 a year",0,0,0
+3,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+11,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+30,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+38,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+39,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+42,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+44,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+45,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+48,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+50,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+51,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+54,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+57,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+58,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+59,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+60,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+62,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+64,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+65,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+66,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+67,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+69,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+70,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+71,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+72,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+74,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+75,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+76,Base1HA,Increased media attention to possible discrimination against or harassment of women,0,0,0
+3,Base1BF,Building a fence along the Mexican boarder,0,0,0
+4,Base1BF,Building a fence along the Mexican boarder,0,0,0
+6,Base1BF,Building a fence along the Mexican boarder,0,0,0
+8,Base1BF,Building a fence along the Mexican boarder,0,0,0
+9,Base1BF,Building a fence along the Mexican boarder,0,0,0
+11,Base1BF,Building a fence along the Mexican boarder,0,0,0
+12,Base1BF,Building a fence along the Mexican boarder,0,0,0
+17,Base1BF,Building a fence along the Mexican boarder,0,0,0
+18,Base1BF,Building a fence along the Mexican boarder,0,0,0
+20,Base1BF,Building a fence along the Mexican boarder,0,0,0
+21,Base1BF,Building a fence along the Mexican boarder,0,0,0
+23,Base1BF,Building a fence along the Mexican boarder,0,0,0
+26,Base1BF,Building a fence along the Mexican boarder,0,0,0
+27,Base1BF,Building a fence along the Mexican boarder,0,0,0
+30,Base1BF,Building a fence along the Mexican boarder,0,0,0
+33,Base1BF,Building a fence along the Mexican boarder,0,0,0
+39,Base1BF,Building a fence along the Mexican boarder,0,0,0
+42,Base1BF,Building a fence along the Mexican boarder,0,0,0
+44,Base1BF,Building a fence along the Mexican boarder,0,0,0
+45,Base1BF,Building a fence along the Mexican boarder,0,0,0
+48,Base1BF,Building a fence along the Mexican boarder,0,0,0
+50,Base1BF,Building a fence along the Mexican boarder,0,0,0
+51,Base1BF,Building a fence along the Mexican boarder,0,0,0
+54,Base1BF,Building a fence along the Mexican boarder,0,0,0
+56,Base1BF,Building a fence along the Mexican boarder,0,0,0
+58,Base1BF,Building a fence along the Mexican boarder,0,0,0
+59,Base1BF,Building a fence along the Mexican boarder,0,0,0
+60,Base1BF,Building a fence along the Mexican boarder,0,0,0
+63,Base1BF,Building a fence along the Mexican boarder,0,0,0
+64,Base1BF,Building a fence along the Mexican boarder,0,0,0
+65,Base1BF,Building a fence along the Mexican boarder,0,0,0
+66,Base1BF,Building a fence along the Mexican boarder,0,0,0
+67,Base1BF,Building a fence along the Mexican boarder,0,0,0
+68,Base1BF,Building a fence along the Mexican boarder,0,0,0
+70,Base1BF,Building a fence along the Mexican boarder,0,0,0
+71,Base1BF,Building a fence along the Mexican boarder,0,0,0
+72,Base1BF,Building a fence along the Mexican boarder,0,0,0
+74,Base1BF,Building a fence along the Mexican boarder,0,0,0
+76,Base1BF,Building a fence along the Mexican boarder,0,0,0
+77,Base1BF,Building a fence along the Mexican boarder,0,0,0

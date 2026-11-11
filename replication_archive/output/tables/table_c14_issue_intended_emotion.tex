@@ -1,0 +1,30 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Predicting Target Issue CATEs from Intended Emotions},
+note{}={* p \num{< 0.05}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-9}{solid, black, 0.05em},
+hline{12}={1-9}{solid, black, 0.05em},
+hline{1}={1-9}{solid, black, 0.08em},
+hline{14}={1-9}{solid, black, 0.08em},
+column{2-9}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Dem (PD) & Dem (PR) & Ind (PD) & Ind (PR) & Rep (PD) & Rep (PR) & All & All (2) \\
+Intercept & \num{0.000} & \num{-0.040} & \num{0.029} & \num{-0.013} & \num{0.017} & \num{0.035} & \num{0.000} & \num{-0.014} \\
+& (\num{0.015}) & (\num{0.021}) & (\num{0.034}) & (\num{0.084}) & (\num{0.012}) & (\num{0.037}) & (\num{0.009}) & (\num{0.009}) \\
+Intended Emotion Index & \num{-0.032} & \num{0.091} & \num{-0.138} & \num{0.025} & \num{0.027} & \num{-0.024} & \num{0.009} & \num{0.017} \\
+& (\num{0.056}) & (\num{0.060}) & (\num{0.140}) & (\num{0.211}) & (\num{0.037}) & (\num{0.062}) & (\num{0.023}) & (\num{0.018}) \\
+Pro Republican &  &  &  &  &  &  &  & \num{-0.002} \\
+&  &  &  &  &  &  &  & (\num{0.012}) \\
+Independent &  &  &  &  &  &  &  & \num{0.003} \\
+&  &  &  &  &  &  &  & (\num{0.019}) \\
+Republican &  &  &  &  &  &  &  & \num{0.033}* \\
+&  &  &  &  &  &  &  & (\num{0.009}) \\
+Observations & \num{24} & \num{10} & \num{24} & \num{10} & \num{24} & \num{10} & \num{102} & \num{102} \\
+Q-test p & 0.434 & 0.796 & 0.090 & 0.394 & 0.502 & 0.049 & 0.152 & 0.216 \\
+\end{talltblr}
+\end{table}

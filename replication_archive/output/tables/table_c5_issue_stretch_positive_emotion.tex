@@ -1,0 +1,30 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+caption={Predicting Target Issue (Stretch Coding) CATEs from Positive Emotions},
+note{}={* p \num{< 0.05}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-9}{solid, black, 0.05em},
+hline{12}={1-9}{solid, black, 0.05em},
+hline{1}={1-9}{solid, black, 0.08em},
+hline{14}={1-9}{solid, black, 0.08em},
+column{2-9}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Dem (PD) & Dem (PR) & Ind (PD) & Ind (PR) & Rep (PD) & Rep (PR) & All & All (2) \\
+Intercept & \num{0.012} & \num{-0.047} & \num{-0.058} & \num{-0.101}* & \num{-0.002} & \num{0.024} & \num{0.007} & \num{0.003} \\
+& (\num{0.012}) & (\num{0.013}) & (\num{0.030}) & (\num{0.031}) & (\num{0.012}) & (\num{0.022}) & (\num{0.007}) & (\num{0.008}) \\
+Positive Index & \num{-0.051} & \num{0.348} & \num{0.344} & \num{0.594}* & \num{0.172} & \num{-0.072} & \num{-0.025} & \num{-0.018} \\
+& (\num{0.047}) & (\num{0.104}) & (\num{0.173}) & (\num{0.157}) & (\num{0.086}) & (\num{0.039}) & (\num{0.032}) & (\num{0.033}) \\
+Pro Republican &  &  &  &  &  &  &  & \num{-0.005} \\
+&  &  &  &  &  &  &  & (\num{0.008}) \\
+Independent &  &  &  &  &  &  &  & \num{-0.006} \\
+&  &  &  &  &  &  &  & (\num{0.010}) \\
+Republican &  &  &  &  &  &  &  & \num{0.011} \\
+&  &  &  &  &  &  &  & (\num{0.008}) \\
+Observations & \num{55} & \num{23} & \num{55} & \num{23} & \num{55} & \num{23} & \num{234} & \num{234} \\
+Q-test p & 0.156 & 0.625 & 0.189 & 0.271 & 0.619 & 0.438 & 0.076 & 0.081 \\
+\end{talltblr}
+\end{table}
