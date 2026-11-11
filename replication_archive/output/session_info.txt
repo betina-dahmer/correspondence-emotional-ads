@@ -1,10 +1,10 @@
-R version 4.6.0 (2026-04-24)
-Platform: aarch64-apple-darwin23
-Running under: macOS Tahoe 26.6.2
+R version 4.5.0 (2025-04-11)
+Platform: aarch64-apple-darwin20
+Running under: macOS 26.6.2
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
-LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -15,31 +15,42 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] excheckr_0.1.0
+
 loaded via a namespace (and not attached):
-[1] compiler_4.6.0  here_1.0.2      rprojroot_2.1.1
+ [1] vctrs_0.7.1        cli_3.6.6          rlang_1.3.0        processx_3.8.6    
+ [5] purrr_1.2.2        generics_0.1.4     S7_0.2.0           glue_1.8.0        
+ [9] backports_1.5.0    rprojroot_2.1.1    pkgbuild_1.4.8     ps_1.9.1          
+[13] scales_1.4.0       grid_4.5.0         tibble_3.3.1       lifecycle_1.0.5   
+[17] compiler_4.5.0     dplyr_1.2.1        RColorBrewer_1.1-3 pkgconfig_2.0.3   
+[21] here_1.0.1         tidyr_1.3.2        rstudioapi_0.17.1  farver_2.1.2      
+[25] R6_2.6.1           tidyselect_1.2.1   pillar_1.10.2      curl_6.3.0        
+[29] callr_3.7.6        magrittr_2.0.3     gtable_0.3.6       tools_4.5.0       
+[33] broom_1.0.10       ggplot2_4.0.0      remotes_2.5.0      desc_1.4.3        
 
 Package versions used by this pipeline:
   tidyverse      2.0.0
   dplyr          1.2.1
-  ggplot2        4.0.3
+  ggplot2        4.0.0
   tidyr          1.3.2
-  readr          2.2.0
+  readr          2.1.5
   purrr          1.2.2
   tibble         3.3.1
   stringr        1.6.0
-  forcats        1.0.1
-  here           1.0.2
+  forcats        1.0.0
+  here           1.0.1
   ggrepel        0.9.8
-  glue           1.8.1
-  readxl         1.5.0
-  Matrix         1.7.5
-  broom          1.0.13
-  estimatr       2.0.0
-  metafor        5.0.1
+  glue           1.8.0
+  readxl         1.4.5
+  Matrix         1.7.4
+  broom          1.0.10
+  estimatr       1.0.6
+  metafor        5.2.1
   clubSandwich   0.7.0
-  modelsummary   2.6.0
-  boot           1.3.32
-  xtable         1.8.8
-  psych          2.6.5
-  GGally         2.4.0
+  modelsummary   2.5.0
+  boot           1.3.31
+  xtable         1.8.4
+  psych          2.6.9
+  GGally         2.5.0
   excheckr       0.1.0
