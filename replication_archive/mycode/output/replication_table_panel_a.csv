@@ -1,0 +1,8 @@
+quantity,published,reproduced,match
+Experimental waves (p. 4),29,29,TRUE
+Unique ads (p. 4),48,48,TRUE
+"Ad treatments, ad x wave (p. 4)",58,58,TRUE
+"Analysis sample (p. 1: approx. 28,000)",NA,28679,NA
+Favorability estimates (p. 7),174,174,TRUE
+Vote choice estimates (p. 7),102,102,TRUE
+Two-ad sample (appendix p. 22),5070,5077,FALSE

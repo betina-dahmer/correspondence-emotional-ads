@@ -1,0 +1,11 @@
+figure,index,dv,pub_est,rep_est,pub_se,rep_se,match
+Figure 2,Negative,Favorability,0.014,0.014,0.017,0.017,TRUE
+Figure 2,Negative,Vote Choice,-0.005,-0.005,0.041,0.041,TRUE
+Figure 2,Positive,Favorability,0.008,0.008,0.014,0.014,TRUE
+Figure 2,Positive,Vote Choice,0.022,0.022,0.021,0.021,TRUE
+Figure 3,Intended,Favorability,-0.004,-0.004,0.013,0.013,TRUE
+Figure 3,Intended,Vote Choice,-0.023,-0.023,0.024,0.024,TRUE
+Figure 4,Negative,Target Issue Support,0.052,0.052,0.059,0.059,TRUE
+Figure 4,Negative,Turnout Intentions,-0.017,-0.017,0.021,0.021,TRUE
+Figure 4,Positive,Target Issue Support,-0.039,-0.039,0.041,0.041,TRUE
+Figure 4,Positive,Turnout Intentions,0.064,0.064,0.035,0.035,TRUE

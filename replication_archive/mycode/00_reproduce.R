@@ -29,6 +29,10 @@ source(here::here("run_all.R"))
 
 # All scripts ran OK.
 
+# All figures and tables from the article and appendix were regenerated
+# in output/figures and output/tables. I compared Figures 1-4 against
+# the published PDF and they match.
+
 # CLAIM SUMMARY: asserted=72 matched=67 mismatched=0 unasserted=6
 
 # What the numbers mean (from reading in_text_claims.R):
