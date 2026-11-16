@@ -63,16 +63,11 @@ source(here::here("run_all.R"))
 
 # Problems I hit (and how I fixed them):
 #
-#   1. The first time I ran run_all.R, every script failed with
-#      "there is no package called 'metafor'". I didn't have all the
-#      packages from the README installed.
+#   1. The first time I ran run_all.R, every script failed with "there is no package called 'metafor'". I didn't have all the packages from the README installed.
 #      Missing: metafor, clubSandwich, psych, GGally, excheckr.
 #      Fix: installed only the missing ones (section above).
 #
-#   2. excheckr still wouldn't install: "package 'excheckr' is not
-#      available for this version of R". That message is misleading:
-#      excheckr isn't on CRAN at all. It's Coppock's own package and
-#      lives on his GitHub (acoppock/excheckr).
+#   2. excheckr still wouldn't install: "package 'excheckr' is not available for this version of R". That message is misleading: excheckr isn't on CRAN at all. It's Coppock's own package and lives on his GitHub.
 #      Fix: remotes::install_github("acoppock/excheckr").
 #
 #   After fixing these, run_all.R ran start to finish with no errors.
