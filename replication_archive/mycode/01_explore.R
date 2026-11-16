@@ -1,5 +1,5 @@
 # 01_explore.R
-# Getting to know the data before building my extension.
+# Getting to know the data 
 
 source(here::here("code", "helpers.R"))
 exps_clean <- read_rds(here::here("data", "exps_clean.rds"))
