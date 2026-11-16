@@ -27,11 +27,7 @@ source(here::here("run_all.R"))
 
 # What happened --------------------------------------------------------
 
-# All scripts ran OK.
-
-# All figures and tables from the article and appendix were regenerated
-# in output/figures and output/tables. I compared Figures 1-4 against
-# the published PDF and they match.
+# All scripts ran OK. All figures and tables from the article and appendix were regenerated in output/figures and output/tables. I compared Figures 1-4 against the published article and they match.
 
 # CLAIM SUMMARY: asserted=72 matched=67 mismatched=0 unasserted=6
 
@@ -44,34 +40,18 @@ source(here::here("run_all.R"))
 #     two-ad sample.
 #   - "unasserted" = those 5 + the final claim_evidence() note = 6.
 #   - So 72 - 67 = 5 is not a problem, just how the script labels things.
+#
+# Two things I learned by checking the audit against the published article:
+#   1. The "article prints X, corrected to Y" notes refer to an earlier draft. The published version already has the corrected numbers.
+#   2. The one real difference left is the two-ad sample (5,070 published, 5,077 in the code). Because it's marked "derived", it never shows up as a mismatch.
 
-# Main results reproduce: the slopes and SEs in Figures 2-4 match, and none is significant, same as the paper.
-
-# Did the published article actually have errors? --------------------------
-
-# in_text_claims.R flags some numbers as "article prints X, corrected to Y". So I opened the published article and its online appendix and looked up each one.
-
-# Result: almost everything was already corrected before publication.
-#   - Cronbach's alpha, positive scale: 0.89 (article p. 4)
-#   - Trump contrast ads: three (article p. 5)
-#   - Trump's ad title: "Unfit to Serve" (article p. 5, note 3)
-#   - SEs: 0.041 (Fig 2), 0.024 (Fig 3), 0.059 and 0.041 (Fig 4),
-#     all the same as the code
-#   - Republicans rating the pro-Rep ad higher: 87.1% (appendix p. 24)
-# So the "article prints" notes in the script are about an earlier draft of the paper, not the published one.
-
-# The ONE real difference left:
-#   - People who saw two ads: the appendix says n = 5,070 (p. 22),
-#     the code gives 5,077.
-#   It's small and doesn't change any result, but it's in the published appendix, and in_text_claims.R marks it as "derived", so it never shows up as a mismatch in the CLAIM SUMMARY.
+# The full published vs. reproduced comparison is in 01_replication_table.R.
 
 # Problems I hit (and how I fixed them):
-#
+
 #   1. The first time I ran run_all.R, every script failed with "there is no package called 'metafor'". I didn't have all the packages from the README installed.
 #      Missing: metafor, clubSandwich, psych, GGally, excheckr.
 #      Fix: installed only the missing ones (section above).
-#
+
 #   2. excheckr still wouldn't install: "package 'excheckr' is not available for this version of R". That message is misleading: excheckr isn't on CRAN at all. It's Coppock's own package and lives on his GitHub.
 #      Fix: remotes::install_github("acoppock/excheckr").
-#
-#   After fixing these, run_all.R ran start to finish with no errors.
