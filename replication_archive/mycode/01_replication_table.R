@@ -79,3 +79,5 @@ write_csv(panel_b, here::here("mycode", "output", "replication_table_panel_b.csv
 print(xtable::xtable(panel_b, digits = 3),
       include.rownames = FALSE,
       file = here::here("mycode", "output", "replication_table_panel_b.tex"))
+
+# Result: everything matches except the two-ad sample (published 5,070, reproduced 5,077). The analysis sample has no exact published value (the article says "approximately 28,000"); the code gives 28,679. All 10 slopes and SEs in Figures 2-4 match to the printed 3 decimals.
