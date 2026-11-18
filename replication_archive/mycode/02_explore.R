@@ -1,48 +1,59 @@
 # 02_explore.R
-# Getting to know the data
+# Data exploration and partisan identification
+#
+# Examines the available variables, partisan identification coding, and subgroup sample sizes before the extension.
 
-# Before I extend the analysis, I want to know what's actually in the data: which variables exist, how party ID was coded, and whether there are enough strong Republicans to look at them separately.
+# Requires: 00_reproduce.R
+
+# 1. Load data -----------------------------------------------------------
 
 source(here::here("code", "helpers.R"))
-exps_clean <- read_rds(here::here("data", "exps_clean.rds"))
 
-# What's in the data ----------------------------------------------------
-dim(exps_clean)    # 28,679 people, 87 variables
+exps_clean <- read_rds(
+  here::here("data", "exps_clean.rds")
+)
+
+# 2. Inspect available variables -----------------------------------------
+
+dim(exps_clean)
 names(exps_clean)
-# No ideology, religion, age, race, or education in the deposited data.
-# The README says the authors removed 324 of the 387 original columns for privacy and kept only what their scripts use. The only political trait left is party ID (pid_7_pre and pid_3_pre), measured before people saw the ad.
 
+# The deposited data retain the seven-point and three-category measures of pre-treatment partisan identification.
 
-# How was pid_3 built from pid_7? ---------------------------------------
-# The data have two versions of party ID. pid_7_pre is the detailed 7-point scale (1 = strong Democrat ... 4 = pure independent ... 7 = strong Republican). pid_3_pre is the short 3-group version that the authors use to split the effects. pid_3 was built by grouping pid_7 points, and the open question is where the leaners (3 and 5) went: into "independent" or into the party they lean toward?
+# 3. Examine partisan identification -------------------------------------
 
-# Crossing the two variables shows exactly which pid_7 points ended up in each pid_3 group.
+# Compare the seven-point and three-category party ID measures.
+# Partisan leaners are classified with their preferred party.
 
-table(exps_clean$pid_3_pre, exps_clean$pid_7_pre)
+table(
+  exps_clean$pid_3_pre,
+  exps_clean$pid_7_pre
+)
 
-# - Independents are only pid_7 = 4. So inside the independent subgroup the pid_7_pre control is constant and gets dropped (that's the "rank deficient" warnings in estimate_all_cates.R). Doesn't change anything, because random assignment already makes groups comparable.
+# Examine the five partisan groups used in the extension.
 
-# - Leaners (3 and 5) are counted as partisans. Standard choice, but still a choice worth mentioning.
+exps_clean |>
+  mutate(
+    party_group = case_when(
+      pid_7_pre == 1 ~ "Strong Democrat",
+      pid_7_pre %in% 2:3 ~ "Weak/lean Democrat",
+      pid_7_pre == 4 ~ "Independent",
+      pid_7_pre %in% 5:6 ~ "Weak/lean Republican",
+      pid_7_pre == 7 ~ "Strong Republican"
+    )
+  ) |>
+  count(party_group)
 
-# - Strong Republicans (7): 4,821 people, the largest Republican group. The authors never separate them from weak Republicans and leaners.
+# 4. Examine subgroup sample sizes ---------------------------------------
 
-
-# How many strong Republicans per comparison? -----------------------------
-# Each CATE compares people who saw one ad with people who saw the placebo, in one wave. So what matters for my extension is not the 4,821 total, but how many strong Republicans fall into each ad-by-wave cell. (The placebo shows up here as its own "ad".)
+# Count strong Republicans in each ad-by-wave cell, including placebo observations.
 
 exps_clean |>
   filter(pid_7_pre == 7) |>
   count(date, ad_title) |>
-  summarise(cells = n(),
-            min_n = min(n),
-            median_n = median(n),
-            max_n = max(n))
-
-
-# Result: 86 cells (58 ad-by-wave treatments + the placebo cell in each wave).
-
-# Strong Republicans per cell: min 25, median 45.5, max 132.
-
-# What this means: a typical comparison is ~45 strong Republicans who saw an ad vs. ~45 who saw the placebo. Each single estimate will be very noisy.
-
-# The meta-regression pools all the estimates, so the extension is still doable, but it has to be framed as exploratory, and I need to discuss power: a null result could mean no effect OR not enough people to see one.
+  summarise(
+    cells = n(),
+    min_n = min(n),
+    median_n = median(n),
+    max_n = max(n)
+  )
