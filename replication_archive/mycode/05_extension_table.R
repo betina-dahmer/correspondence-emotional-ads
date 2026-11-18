@@ -1,4 +1,4 @@
-# 04_extension_table.R
+# 05_extension_table.R
 
 # Table 2: strong vs. weak partisans -----------------------------------------
 # One row per test. Two versions of the difference (strong minus weak slope):
