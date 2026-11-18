@@ -1,4 +1,4 @@
-# 01_explore.R
+# 02_explore.R
 # Getting to know the data
 
 # Before I extend the analysis, I want to know what's actually in the data: which variables exist, how party ID was coded, and whether there are enough strong Republicans to look at them separately.
@@ -37,3 +37,12 @@ exps_clean |>
             min_n = min(n),
             median_n = median(n),
             max_n = max(n))
+
+
+# Result: 86 cells (58 ad-by-wave treatments + the placebo cell in each wave).
+
+# Strong Republicans per cell: min 25, median 45.5, max 132.
+
+# What this means: a typical comparison is ~45 strong Republicans who saw an ad vs. ~45 who saw the placebo. Each single estimate will be very noisy.
+
+# The meta-regression pools all the estimates, so the extension is still doable, but it has to be framed as exploratory, and I need to discuss power: a null result could mean no effect OR not enough people to see one.
