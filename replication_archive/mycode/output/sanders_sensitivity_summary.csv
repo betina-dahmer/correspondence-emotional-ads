@@ -1,0 +1,5 @@
+specification,version,n_tests,n_nominal_p05,n_holm_p05
+Baseline,Original,8,1,0
+Baseline,Corrected,8,1,0
+Ad-side adjusted,Original,8,1,0
+Ad-side adjusted,Corrected,8,1,0
