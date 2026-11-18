@@ -1,0 +1,3 @@
+specification,n_tests,n_nominal_p05,n_holm_p05,median_ci_width_100
+Baseline,8,1,0,36.073408260385975
+Ad-side adjusted,8,1,0,39.04557352075695
