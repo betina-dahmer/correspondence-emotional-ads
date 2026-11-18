@@ -1,4 +1,4 @@
-# 02_replication_table.R
+# 01_replication_table.R
 # Replication table: published results vs. my reproduced results
 
 # Panel A: design and sample numbers. 

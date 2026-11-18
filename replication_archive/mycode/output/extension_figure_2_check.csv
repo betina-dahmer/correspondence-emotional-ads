@@ -1,0 +1,5 @@
+index,dv,estimate,std.error,p.value,n_cates
+negative_index,Favorability,0.014,0.017,0.4317978026066165,174
+negative_index,Vote Choice,-0.005,0.041,0.9023861763916744,102
+positive_index,Favorability,0.008,0.014,0.5665733022198522,174
+positive_index,Vote Choice,0.022,0.021,0.32529926240874774,102
