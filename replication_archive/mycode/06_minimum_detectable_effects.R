@@ -1,4 +1,4 @@
-# 06_what_data_can_rule_out.R
+# 06_minimum_detectable_effects.R
 # Precision of partisan-strength differences in emotional persuasion
 
 # Evaluate confidence intervals for the eight emotion-by-strength
