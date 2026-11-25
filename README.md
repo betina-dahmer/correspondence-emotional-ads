@@ -16,9 +16,7 @@ The original replication archive is retained to preserve the original directory 
 
 All scripts developed for this correspondence are located in the `mycode` directory. The original authors' scripts and data are retained separately within the replication archive.
 
-## Original study and replication materials
-
-This correspondence replicates and extends Murphy et al. (2026), Do Emotional Ads Persuade? Evidence from Real-Time Campaign Advertising Experiments, published in Political Communication.
+## Replication materials
 
 The original replication materials are available through the Harvard Dataverse:
 
