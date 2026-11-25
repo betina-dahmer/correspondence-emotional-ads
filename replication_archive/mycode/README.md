@@ -23,9 +23,22 @@ The extension considers positive and negative emotion indices and two outcomes: 
 
 ## Reproducing the analyses
 
-Run scripts from the **repository root**, with the original authors' replication files and data in their expected locations. The authors' pipeline is run by `run_all.R`; the original code is in `code/` and data in `data/`. The project-specific scripts are in `mycode/` and write outputs to `mycode/output/`.
+Run scripts from the **`replication_archive/` directory**, which must also be the root resolved by `here::here()`, with the original authors' replication files and data in their expected locations. The authors' pipeline is run by `run_all.R`; the original code is in `code/` and data in `data/`. The project-specific scripts are in `mycode/` and write outputs to `mycode/output/`.
 
-In R, run the scripts in this order:
+Start a clean R session in `replication_archive/`. Before running the scripts, check that the expected directories and project root are available:
+
+```r
+getwd()
+here::here()
+stopifnot(
+  dir.exists("code"),
+  dir.exists("data"),
+  dir.exists("mycode"),
+  normalizePath(here::here()) == normalizePath(getwd())
+)
+```
+
+If the root check fails, resolve the project-root configuration before proceeding. In R, run the scripts in this order:
 
 ```r
 source("mycode/00_reproduce.R")
@@ -34,7 +47,7 @@ source("mycode/02_explore.R")
 source("mycode/03_extension.R")
 source("mycode/04_extension_figure.R")
 source("mycode/05_extension_table.R")
-source("mycode/06_what_data_can_rule_out.R")
+source("mycode/06_minimum_detectable_effects.R")
 source("mycode/07_precision_figure.R")
 source("mycode/08_sanders_sensitivity.R")
 ```
@@ -51,7 +64,7 @@ The first script checks and installs required packages, including `excheckr` fro
 | `03_extension.R` | Reproduce the published Figure 2 specification, estimate five-group slopes, test strong-versus-weak/lean differences, adjust for ad side, apply Holm correction, and conduct leave-one-ad-out checks. |
 | `04_extension_figure.R` | Generate the extension's group-specific slope figure. |
 | `05_extension_table.R` | Generate the extension's interaction-results table. |
-| `06_what_data_can_rule_out.R` | Compute CR2 confidence intervals and precision summaries for the eight baseline and eight adjusted interaction estimates. |
+| `06_minimum_detectable_effects.R` | Calculate minimum detectable effects and summarize statistical precision, including CR2 confidence intervals for the baseline and adjusted interaction estimates. |
 | `07_precision_figure.R` | Plot pointwise 95% confidence intervals for the interaction estimates. |
 | `08_sanders_sensitivity.R` | Correct the Sanders favorability normalization in memory, re-estimate Figure 2 and interaction models, and compare original with corrected results. |
 
@@ -77,7 +90,11 @@ The extension figure and table are generated separately by scripts 04 and 05.
 
 ### Replication
 
-The original replication pipeline completed successfully. Its claim audit reported **72 asserted claims, 67 matched, zero mismatched, and six unasserted**. Five of the assertions are designated as derived rather than directly checked against published values. The reproduced Figure 2 slopes and standard errors match the published values at reported precision. A separate discrepancy concerns an appendix two-ad sample size: 5,070 in the published article versus 5,077 in the replication code.
+The original replication pipeline completed successfully. Its claim audit reported **72 claims checked, 67 matched, and zero mismatched**. Five claims are designated as derived rather than directly checked against published values. All ten published meta-regression slopes and corresponding standard errors in Figures 2 through 4 are reproduced to their reported precision. A separate discrepancy concerns an appendix two-ad sample size: 5,070 in the published article versus 5,077 in the replication code.
+
+### Statistical precision and minimum detectable effects
+
+Under a normal approximation with a fixed standard error, 80% power, and a two-sided 5% significance level, the minimum detectable gap between high- and low-emotion ads (90th versus 10th percentile) ranges from 1.4 to 1.6 points for favorability and from 2.2 to 3.9 points for vote choice, on a 0–100 outcome scale. These estimates suggest limited power to detect modest but substantively meaningful associations, particularly for vote choice. They are approximate power benchmarks, not exact power calculations for the clustered meta-regression or bounds on effects excluded by the data.
 
 ### Partisan-strength extension
 
@@ -89,9 +106,16 @@ A leave-one-ad-out analysis examines the Republican positive-emotion × favorabi
 
 ### Sanders favorability sensitivity
 
-The authors' cleaning code applies the `(x - 1) / 4` transformation **twice** to `favorBS_rev`, unlike the other candidate-favorability outcomes. Script 08 reverses the second transformation in memory using `favorBS_rev = 4 * favorBS_rev + 1`, then re-estimates the CATEs, sampling covariance matrices, and meta-regressions. The original source files are not modified.
+The authors' cleaning code (`code/clean_exps.R`, lines 69–70) applies the `(x - 1) / 4` transformation **twice** to `favorBS_rev`, unlike the other candidate-favorability outcomes. Script 08 reverses the second transformation in memory using `favorBS_rev = 4 * favorBS_rev + 1`, then re-estimates the CATEs, sampling covariance matrices, and meta-regressions. The original source files are not modified.
 
-The correction changes several favorability coefficients and standard errors. For example, the pooled positive-emotion/favorability slope changes from approximately 0.008 to 0.026. Nevertheless, the number of statistically significant interactions is unchanged:
+The correction changes both the magnitude and precision of the pooled favorability estimates:
+
+| Emotion | Original estimate (SE) | Corrected estimate (SE) | Corrected p-value |
+| --- | ---: | ---: | ---: |
+| Positive | 0.008 (0.014) | 0.026 (0.025) | 0.310 |
+| Negative | 0.014 (0.017) | 0.008 (0.034) | 0.824 |
+
+Neither slope is statistically significant before or after correction. The number of statistically significant interactions is also unchanged:
 
 | Specification | Original: nominal *p* < .05 | Corrected: nominal *p* < .05 | Original: Holm *p* < .05 | Corrected: Holm *p* < .05 |
 | --- | ---: | ---: | ---: | ---: |
@@ -112,6 +136,8 @@ The five-group estimation generates variance warnings for some small or low-vari
 - Confidence intervals in the precision figure are pointwise 95% intervals, not simultaneous intervals.
 - The Sanders correction is a sensitivity analysis, not a replacement for the original published-data replication.
 
-## Reference
+## References
 
 Murphy, John, Alexander Coppock, Seth J. Hill, and Lynn Vavreck. 2026. “Do Emotional Ads Persuade? Evidence from Real-Time Campaign Advertising Experiments.” *Political Communication*. https://doi.org/10.1080/10584609.2026.2726266
+
+Original replication materials: Harvard Dataverse. https://doi.org/10.7910/DVN/CB3LP1
