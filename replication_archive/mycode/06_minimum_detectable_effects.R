@@ -1,10 +1,114 @@
 # 06_minimum_detectable_effects.R
-# Precision of partisan-strength differences in emotional persuasion
+# Statistical precision and minimum detectable effects
 
-# Evaluate confidence intervals for the eight emotion-by-strength
-# interactions and their ad-side-adjusted robustness estimates.
+# Part A: Minimum detectable effects for the original Figure 2.
+# Part B: Precision of partisan-strength interactions.
 
-# Run 03_extension.R before executing this script.
+# Requires: 00_reproduce.R and 03_extension.R
+
+library(tidyverse)
+
+out <- function(file) here::here("mycode", "output", file)
+
+# PART A: MINIMUM DETECTABLE EFFECTS -------------------------
+
+# A1. Load original meta-regression estimates ----------------
+
+pooled <- read_csv(
+  here::here("output", "tables", "figure_2_meta_estimates.csv"),
+  show_col_types = FALSE
+) |>
+  filter(
+    dv %in% c("Favorability", "Vote Choice"),
+    index %in% c("negative_index", "positive_index")
+  ) |>
+  select(index, dv, estimate, std.error)
+
+# A2. Calculate the observed emotion range -------------------
+# Use the 90th and 10th percentiles of emotional responses
+# across ads, waves, and partisan groups.
+
+emotion_spread <- read_rds(
+  here::here("data", "estimates", "ratings_pid.rds")
+) |>
+  filter(
+    rating_outcome %in% c("positive_index", "negative_index")
+  ) |>
+  summarise(
+    p10 = quantile(rating_estimate, 0.10, na.rm = TRUE),
+    p90 = quantile(rating_estimate, 0.90, na.rm = TRUE),
+    .by = rating_outcome
+  ) |>
+  rename(index = rating_outcome) |>
+  mutate(emotion_gap = p90 - p10)
+
+print(emotion_spread)
+
+# A3. Calculate the average signed CATE ----------------------
+
+avg_effect <- read_rds(
+  here::here("data", "estimates", "all_cates.rds")
+) |>
+  mutate(
+    dv = case_when(
+      str_detect(outcome, "favor") ~ "Favorability",
+      str_detect(outcome, "general_vote") ~ "Vote Choice"
+    )
+  ) |>
+  filter(!is.na(dv)) |>
+  summarise(
+    avg_ad_effect = mean(estimate),
+    .by = dv
+  )
+
+print(avg_effect)
+
+# A4. Calculate minimum detectable effects ------------------
+# Normal approximation: 80% power, two-sided 5% test,
+# and a fixed standard error.
+# These are approximate power benchmarks, not confidence bounds.
+
+mde_results <- pooled |>
+  left_join(emotion_spread, by = "index") |>
+  left_join(avg_effect, by = "dv") |>
+  mutate(
+    mde_slope = 2.80 * std.error,
+    mde_gap_100 = 100 * mde_slope * emotion_gap,
+    avg_ad_effect_100 = 100 * avg_ad_effect,
+    ratio = mde_gap_100 / avg_ad_effect_100
+  ) |>
+  arrange(index, dv)
+
+stopifnot(
+  nrow(mde_results) == 4,
+  all(is.finite(mde_results$mde_gap_100)),
+  all(is.finite(mde_results$ratio))
+)
+
+print(mde_results, n = Inf, width = Inf)
+
+# A5. Format and export Table 2 ------------------------------
+
+mde_table <- mde_results |>
+  transmute(
+    Index = recode(
+      index,
+      negative_index = "Negative",
+      positive_index = "Positive"
+    ),
+    Outcome = dv,
+    `Slope (SE)` = sprintf("%.3f (%.3f)", estimate, std.error),
+    `Minimum detectable gap` = sprintf("%.1f", mde_gap_100),
+    `Average ad effect` = sprintf("%.1f", avg_ad_effect_100),
+    Ratio = sprintf("%.1f", ratio)
+  )
+
+print(mde_table, n = Inf, width = Inf)
+
+write_csv(mde_results, out("mde_results.csv"))
+write_csv(mde_table, out("mde_table.csv"))
+
+# PART B: PRECISION OF PARTISAN-STRENGTH INTERACTIONS --------
 
 
 # 1. Load extension results -----------------------------------------------
