@@ -3,8 +3,7 @@
 
 # Plot the eight emotion-by-strength interactions from script 06, comparing baseline and ad-side-adjusted specifications.
 
-# Run 06_what_data_can_rule_out.R before executing this script.
-
+# Requires: 06_minimum_detectable_effects.R
 
 # 1. Load results ----------------------------------------------------------
 

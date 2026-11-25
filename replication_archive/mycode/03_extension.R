@@ -155,14 +155,26 @@ get_coef <- function(fit, term) {
 check <- build_meta_data(exps_clean, "pid_3_pre")
 count(check$d, dv)
 
-figure_2_check <- expand_grid(index = c("negative_index", "positive_index"),
-                              dv = c("Favorability", "Vote Choice")) |>
-  mutate(result = map2(index, dv, \(i, v)
-                       get_coef(fit_meta(check$d, check$V, check$d$dv == v, i), "emotion"))) |>
-  unnest(result) |>
-  mutate(across(c(estimate, std.error), \(x) round(x, 3)))
+figure_2_check <- expand_grid(
+  index = c("negative_index", "positive_index"),
+  dv = c("Favorability", "Vote Choice")
+) |>
+  mutate(
+    result = map2(index, dv, \(i, v)
+                  get_coef(
+                    fit_meta(check$d, check$V, check$d$dv == v, i),
+                    "emotion"
+                  )
+    )
+  ) |>
+  unnest(result)
 
-figure_2_check
+# Round only for display; retain full precision for export.
+
+figure_2_check |>
+  mutate(across(c(estimate, std.error), \(x) round(x, 3))) |>
+  print(n = Inf, width = Inf)
+
 
 # 8. Estimate emotion-persuasion slopes by partisan group ----------------
 
@@ -278,6 +290,6 @@ leave_one_out |>
 
 # Export
 write_csv(
-  leave_one_out,
-  here::here("mycode", "output", "extension_leave_one_out.csv")
+  figure_2_check,
+  here::here("mycode", "output", "extension_figure_2_check.csv")
 )

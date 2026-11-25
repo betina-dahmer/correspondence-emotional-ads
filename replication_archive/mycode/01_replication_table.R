@@ -85,7 +85,7 @@ panel_b <- published |>
   ) |>
   select(figure, index, dv, pub_est, rep_est, pub_se, rep_se, match)
 
-View(panel_b)
+print(panel_b)
 
 # 4. Save results --------------------------------------------------------
 

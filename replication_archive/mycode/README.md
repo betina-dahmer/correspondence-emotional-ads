@@ -60,10 +60,10 @@ The first script checks and installs required packages, including `excheckr` fro
 | --- | --- |
 | `00_reproduce.R` | Run the authors' replication pipeline and audit published claims. |
 | `01_replication_table.R` | Assemble the comparison of published and reproduced estimates. |
-| `02_explore.R` | Explore the experimental data and partisan composition. |
+| `02_explore.R` | Explore the experimental data, partisan composition, and treatment and placebo cell sizes among strong Republicans. |
 | `03_extension.R` | Reproduce the published Figure 2 specification, estimate five-group slopes, test strong-versus-weak/lean differences, adjust for ad side, apply Holm correction, and conduct leave-one-ad-out checks. |
 | `04_extension_figure.R` | Generate the extension's group-specific slope figure. |
-| `05_extension_table.R` | Generate the extension's interaction-results table. |
+| `05_extension_table.R` | Generate the extension's interaction-results table with unadjusted and Holm-adjusted p-values. |
 | `06_minimum_detectable_effects.R` | Calculate minimum detectable effects and summarize statistical precision, including CR2 confidence intervals for the baseline and adjusted interaction estimates. |
 | `07_precision_figure.R` | Plot pointwise 95% confidence intervals for the interaction estimates. |
 | `08_sanders_sensitivity.R` | Correct the Sanders favorability normalization in memory, re-estimate Figure 2 and interaction models, and compare original with corrected results. |
@@ -72,11 +72,15 @@ The first script checks and installs required packages, including `excheckr` fro
 
 Files below are written under `mycode/output/`:
 
-- `extension_figure_2_check.csv`: reproduced Figure 2 estimates using the original specification.
+- `replication_table_panel_a.csv`, `replication_table_panel_b.csv`, and `replication_table_panel_b.tex`: published-versus-reproduced results.
+- `extension_figure_2_check.csv`: reproduced Figure 2 estimates using the original specification, retaining numerical precision before display rounding.
 - `extension_slopes_by_group.csv`: group-specific emotion–persuasion slopes.
 - `extension_difference_test.csv`: baseline strong-versus-weak/lean interactions.
 - `extension_robustness_test.csv`: interactions adjusted for the partisan side of the ad.
 - `extension_leave_one_out.csv`: leave-one-ad-out sensitivity results.
+- `extension_slopes_by_group.pdf`: group-specific slope figure.
+- `extension_table.csv` and `extension_table.tex`: interaction table with unadjusted and Holm-adjusted p-values.
+- `mde_results.csv` and `mde_table.csv`: numerical and formatted minimum detectable effect results.
 - `extension_precision.csv` and `extension_precision_summary.csv`: confidence intervals and precision summaries.
 - `extension_precision.png` and `extension_precision.pdf`: visualization of pointwise confidence intervals.
 - `sanders_figure2_sensitivity.csv`: published-specification estimates before and after correcting Sanders favorability.
@@ -84,19 +88,30 @@ Files below are written under `mycode/output/`:
 - `sanders_robustness_sensitivity.csv`: ad-side-adjusted interaction comparisons.
 - `sanders_sensitivity_summary.csv`: counts of nominally and Holm-significant interactions before and after correction.
 
-The extension figure and table are generated separately by scripts 04 and 05.
+### Paper-to-code mapping
+
+| Paper item | Script(s) | Output or source |
+| --- | --- | --- |
+| Table 1: Published and reproduced results | `01_replication_table.R` | `replication_table_panel_a.csv`, `replication_table_panel_b.csv` |
+| Table 2: What the Figure 2 meta-regressions can detect | `06_minimum_detectable_effects.R` | `mde_results.csv`, `mde_table.csv` |
+| Figure 1: Meta-regression slopes by emotion and partisan group | `03_extension.R`, `04_extension_figure.R` | `extension_slopes_by_group.csv`, `extension_slopes_by_group.pdf` |
+| Table 3: Differences in emotion slopes by partisan strength | `03_extension.R`, `05_extension_table.R` | `extension_table.csv`, `extension_table.tex` |
+| Interaction precision analysis | `06_minimum_detectable_effects.R`, `07_precision_figure.R` | `extension_precision_summary.csv`, `extension_precision.pdf` |
+| Sanders sensitivity analysis | `08_sanders_sensitivity.R` | `sanders_*_sensitivity.csv`, `sanders_sensitivity_summary.csv` |
 
 ## Results
 
 ### Replication
 
-The original replication pipeline completed successfully. Its claim audit reported **72 claims checked, 67 matched, and zero mismatched**. Five claims are designated as derived rather than directly checked against published values. All ten published meta-regression slopes and corresponding standard errors in Figures 2 through 4 are reproduced to their reported precision. A separate discrepancy concerns an appendix two-ad sample size: 5,070 in the published article versus 5,077 in the replication code.
+The original replication pipeline completed successfully. Its claim audit reported **72 asserted claims, 67 matched, and zero mismatched**. Five asserted claims are designated as derived rather than directly compared with published values. The six unasserted entries comprise those five derived claims and a final evidence note. All ten published meta-regression slopes and corresponding standard errors in Figures 2 through 4 are reproduced to their reported precision. A separate discrepancy concerns an appendix two-ad sample size: 5,070 in the published article versus 5,077 in the replication code.
 
 ### Statistical precision and minimum detectable effects
 
 Under a normal approximation with a fixed standard error, 80% power, and a two-sided 5% significance level, the minimum detectable gap between high- and low-emotion ads (90th versus 10th percentile) ranges from 1.4 to 1.6 points for favorability and from 2.2 to 3.9 points for vote choice, on a 0–100 outcome scale. These estimates suggest limited power to detect modest but substantively meaningful associations, particularly for vote choice. They are approximate power benchmarks, not exact power calculations for the clustered meta-regression or bounds on effects excluded by the data.
 
 ### Partisan-strength extension
+
+Among 4,821 strong Republicans, 3,174 respondents are distributed across 58 ad-by-wave treatment cells and 1,647 across 29 placebo cells. The median cell sizes are 45.5 and 48 respondents, respectively, before outcome-specific exclusions.
 
 The eight baseline interaction tests compare strong with weak/lean partisans across party, emotion index, and outcome. One of eight baseline interactions is nominally significant at the 5% level (Republican positive emotion × favorability), but **none survives Holm adjustment**. The ad-side-adjusted specification also has one nominally significant interaction and none significant after Holm adjustment.
 
@@ -126,7 +141,7 @@ The identity of the nominally significant adjusted interaction changes after cor
 
 ### Estimation note
 
-The five-group estimation generates variance warnings for some small or low-variation cells. The resulting meta-regression input identifies **one unusable CATE**: Strong Democrats, Trump vote choice (`general_vote_DT`), the *Role Model* ad, July 18, 2016, with a `NaN` standard error. The same CATE is unusable in both the original and Sanders-corrected analyses; it is excluded by the existing `usable` filter.
+The five-group estimation generates variance warnings for some small or low-variation cells. The resulting meta-regression input identifies **one unusable CATE**: Strong Democrats, Trump vote choice (`general_vote_DT`), the *Role Model* ad, July 18, 2016, with a `NaN` standard error. The same CATE is unusable in both the original and Sanders-corrected analyses; it is excluded by the existing `usable` filter. The sensitivity script also reports variance warnings; the warnings alone do not establish that every warning originates from this CATE.
 
 ## Scope and limitations
 
