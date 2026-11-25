@@ -294,3 +294,18 @@ readr::write_csv(
   sensitivity_summary,
   file.path(output_dir, "sanders_sensitivity_summary.csv")
 )
+
+# 10. Report corrected favorability estimates (Section 4.4) ----
+
+figure2_comparison |>
+  dplyr::filter(dv == "Favorability") |>
+  dplyr::select(
+    index,
+    estimate_original,
+    std.error_original,
+    p.value_original,
+    estimate_corrected,
+    std.error_corrected,
+    p.value_corrected
+  ) |>
+  print(width = Inf)
